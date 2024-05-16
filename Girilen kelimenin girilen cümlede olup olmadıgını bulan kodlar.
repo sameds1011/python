@@ -1,0 +1,27 @@
+###Girilen kelimenin girilen cümlede olup olmadıgını bulan kodlar.
+sayac = 1
+
+def AraBulYaz(cumle, aranan, i):
+    global sayac
+    for j in range(i, i + len(aranan)):
+        if cumle[j] != aranan[j - i]:
+            return
+    print(f"{aranan} kelimesi bulundu", sayac)
+    sayac += 1
+
+def main():
+    cumle = input("cumle giriniz: ")
+    aranan = input("\nbir kelime giriniz: ")
+    
+    uz_cumle = len(cumle)
+    uz_aranan = len(aranan)
+
+    print("\tGirilen cumle:", cumle)
+
+    for i in range(uz_cumle):
+        AraBulYaz(cumle, aranan, i)
+
+    print("\n\nArama Sona Erdi...")
+
+if __name__ == "__main__":
+    main()
