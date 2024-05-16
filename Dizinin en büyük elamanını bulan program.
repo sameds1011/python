@@ -1,0 +1,10 @@
+#######  Dizinin en büyük elamanını bulan program.
+a = [100, -250, 400, 125, 550, 900, 689, 450, 347, 700]
+eb = a[0]  # ilk eleman en büyük olarak kabul ediliyor
+
+for k in range(1, len(a)):
+    if a[k] > eb:
+        eb = a[k]
+
+print("En büyük eleman =", eb)
+
